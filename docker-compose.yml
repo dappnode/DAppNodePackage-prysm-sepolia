@@ -1,0 +1,38 @@
+version: "3.5"
+services:
+  beacon-chain:
+    image: "beacon-chain.prysm-sepolia.public.dappnode.eth:0.1.0"
+    build:
+      context: beacon-chain
+      args:
+        UPSTREAM_VERSION: v2.1.3-rc.4
+    volumes:
+      - "beacon-chain-data:/data"
+    ports:
+      - "18111:18111/tcp"
+      - "17111:17111/udp"
+    restart: unless-stopped
+    environment:
+      FEE_RECIPIENT: ""
+      HTTP_WEB3PROVIDER: "http://sepolia.dappnode:8551"
+      CORSDOMAIN: "http://prysm-sepolia.dappnode"
+      P2P_TCP_PORT: 18111
+      P2P_UDP_PORT: 17111
+      EXTRA_OPTS: ""
+  validator:
+    image: "validator.prysm-sepolia.public.dappnode.eth:0.1.0"
+    build:
+      context: validator
+      args:
+        UPSTREAM_VERSION: v2.1.3-rc.4
+    volumes:
+      - "validator-data:/root/"
+    restart: unless-stopped
+    environment:
+      BEACON_RPC_PROVIDER: "beacon-chain.prysm-sepolia.dappnode:4000"
+      BEACON_RPC_GATEWAY_PROVIDER: "beacon-chain.prysm-sepolia.dappnode:3500"
+      GRAFFITI: validating_from_DAppNode
+      EXTRA_OPTS: ""
+volumes:
+  beacon-chain-data: {}
+  validator-data: {}
