@@ -14,7 +14,7 @@ services:
     restart: unless-stopped
     environment:
       FEE_RECIPIENT: ""
-      HTTP_WEB3PROVIDER: "http://sepolia.dappnode:8551"
+      HTTP_WEB3PROVIDER: "http://sepolia-geth.dappnode:8545"
       CORSDOMAIN: "http://prysm-sepolia.dappnode"
       P2P_TCP_PORT: 18111
       P2P_UDP_PORT: 17111
