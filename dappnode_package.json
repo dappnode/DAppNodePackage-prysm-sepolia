@@ -6,7 +6,11 @@
   "upstreamArg": "UPSTREAM_VERSION",
   "description": "prysm-sepolia.public.dappnode.eth description",
   "type": "service",
-  "author": "tropicar",
+  "mainService": "validator",
+  "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
+  "contributors": [
+    "tropicar <tropicar@dappnode.io> (https://github.com/tropicar)"
+  ],
   "categories": ["Developer tools"],
   "license": "GPL-3.0",
   "chain": {
