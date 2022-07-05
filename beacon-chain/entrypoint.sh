@@ -13,6 +13,7 @@ exec -c beacon-chain \
   --p2p-udp-port=$P2P_UDP_PORT
   --http-web3provider=$HTTP_WEB3PROVIDER \
   --grpc-gateway-port=3500 \
+  --genesis-state /genesis.ssz \
   --jwt-secret=/jwtsecret \
   --grpc-gateway-corsdomain=$CORSDOMAIN \
   $EXTRA_OPTS
