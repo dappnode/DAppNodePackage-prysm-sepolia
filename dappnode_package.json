@@ -9,6 +9,11 @@
   "author": "tropicar",
   "categories": ["Developer tools"],
   "license": "GPL-3.0",
+  "chain": {
+    "driver": "ethereum-beacon-chain",
+    "serviceName": "beacon-chain",
+    "portNumber": 3500
+  },
   "links": {
     "ui": "http://validator.prysm-sepolia.public.dappnode/",
     "homepage": "https://prysmaticlabs.com/",
