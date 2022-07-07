@@ -1,10 +1,14 @@
 #!/bin/bash
 
+if [[ -n $WEB3_BACKUP ]] && [[ $EXTRA_OPTS != *"--fallback-web3provider"* ]]; then
+  EXTRA_OPTS="--fallback-web3provider=${WEB3_BACKUP} ${EXTRA_OPTS}"
+fi
 
 exec -c beacon-chain \
   --sepolia \
   --accept-terms-of-use \
   --datadir=/data \
+  --genesis-state=/genesis.ssz \
   --rpc-host=0.0.0.0 \
   --grpc-gateway-host=0.0.0.0 \
   --monitoring-host=0.0.0.0 \
@@ -13,7 +17,6 @@ exec -c beacon-chain \
   --p2p-udp-port=$P2P_UDP_PORT
   --http-web3provider=$HTTP_WEB3PROVIDER \
   --grpc-gateway-port=3500 \
-  --genesis-state /genesis.ssz \
   --jwt-secret=/jwtsecret \
   --grpc-gateway-corsdomain=$CORSDOMAIN \
   $EXTRA_OPTS
