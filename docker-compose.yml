@@ -9,12 +9,12 @@ services:
     volumes:
       - "beacon-chain-data:/data"
     ports:
-      - "18111:18111/tcp"
-      - "17111:17111/udp"
+      - "18114:18114/tcp"
+      - "19114:19114/udp"
     restart: unless-stopped
     environment:
       FEE_RECIPIENT: ""
-      HTTP_WEB3PROVIDER: "http://sepolia-geth.dappnode:8545"
+      HTTP_WEB3PROVIDER: "http://sepolia-geth.dappnode:8551"
       CORSDOMAIN: "http://prysm-sepolia.dappnode"
       P2P_TCP_PORT: 18111
       P2P_UDP_PORT: 17111
