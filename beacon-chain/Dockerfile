@@ -21,7 +21,7 @@ COPY --from=binary /usr/local/bin/beacon-chain /usr/local/bin/beacon-chain
 COPY --from=binary /usr/local/bin/entrypoint.sh /usr/local/bin
 COPY --from=binary /tmp/genesis.ssz /genesis.ssz
 COPY ssl /ssl/
-COPY jwtsecret /jwtsecret
+COPY jwt.hex /jwt.hex
 
 RUN apt update && \
     apt install -y ca-certificates file && \
