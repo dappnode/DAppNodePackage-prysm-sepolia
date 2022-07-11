@@ -9,8 +9,8 @@ services:
     volumes:
       - "beacon-chain-data:/data"
     ports:
-      - "18114:18114/tcp"
-      - "19114:19114/udp"
+      - "19114:19114/tcp"
+      - "18114:18114/udp"
     restart: unless-stopped
     environment:
       FEE_RECIPIENT: ""
@@ -18,8 +18,8 @@ services:
       TTD_OVERRIDE: 17000000000000000
       CORSDOMAIN: "http://prysm-sepolia.dappnode"
       WEB3_BACKUP: ""
-      P2P_TCP_PORT: 18111
-      P2P_UDP_PORT: 17111
+      P2P_TCP_PORT: 19114
+      P2P_UDP_PORT: 18114
       EXTRA_OPTS: ""
   validator:
     image: "validator.prysm-sepolia.public.dappnode.eth:0.1.0"
