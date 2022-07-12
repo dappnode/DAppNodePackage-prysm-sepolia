@@ -1,9 +1,8 @@
 #!/bin/bash
 
-if [[ -n $FEE_RECIPIENT ]] && [[ $EXTRA_OPTS != *"--suggested-fee-recipient"* ]]; then
-  EXTRA_OPTS="--suggested-fee-recipient=${FEE_RECIPIENT} ${EXTRA_OPTS}"
+if [[ -n $WEB3_BACKUP ]] && [[ $EXTRA_OPTS != *"--fallback-web3provider"* ]]; then
+  EXTRA_OPTS="--fallback-web3provider=${WEB3_BACKUP} ${EXTRA_OPTS}"
 fi
-
 
 exec -c beacon-chain \
   --datadir=/data \
