@@ -4,9 +4,9 @@
   "upstreamVersion": "v2.1.3",
   "upstreamRepo": "prysmaticlabs/prysm",
   "upstreamArg": "UPSTREAM_VERSION",
-  "description": "prysm-sepolia.public.dappnode.eth description",
+  "shortDescription": "Prysm Sepolia beacon chain node",
+  "description": "Sepolia is an Ethereum testnet which has a closed set of validators, this package lets the user run a beacon-chain node by using the Prysm client. Sepolia network is recommended to test node configuration and node interaction.",
   "type": "service",
-  "mainService": "validator",
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
   "contributors": [
     "tropicar <tropicar@dappnode.io> (https://github.com/tropicar)"
@@ -19,16 +19,8 @@
     "portNumber": 3500
   },
   "links": {
-    "ui": "http://validator.prysm-sepolia.public.dappnode/",
     "homepage": "https://prysmaticlabs.com/",
     "readme": "https://github.com/dappnode/DAppNodePackage-prysm-sepolia",
     "docs": "https://docs.prylabs.network/docs/getting-started"
-  },
-  "backup": [
-    {
-      "name": "eth2validators",
-      "path": "/root/.eth2validators",
-      "service": "validator"
-    }
-  ]
+  }
 }
