@@ -1,1 +1,0 @@
-# DAppNodePackage-prysm-sepolia-
