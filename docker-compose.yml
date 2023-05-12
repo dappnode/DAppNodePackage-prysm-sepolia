@@ -15,7 +15,7 @@ services:
     environment:
       P2P_TCP_PORT: 19114
       P2P_UDP_PORT: 18114
-      CHECKPOINT_SYNC_URL: ""
+      CHECKPOINT_SYNC_URL: "https://checkpoint-sync.sepolia.ethpandaops.io"
       CORSDOMAIN: "http://prysm-sepolia.dappnode"
       HTTP_ENGINE: "http://geth.sepolia-geth.dappnode:8551"
       EXTRA_OPTS: ""
