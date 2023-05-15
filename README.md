@@ -2,6 +2,9 @@
 
 ![Avatar](avatar-prysm-sepolia.png)
 
+**Prysm Sepolia ETH2.0 Beacon chain**
+ Prysm is a Go implementation of the Ethereum 2.0 Serenity protocol and open source project created by Prysmatic Labs. Beacon node which powers the beacon chain at the core of Ethereum 2.0
+ 
 Sepolia was originally a proof-of-authority testnet created by Ethereum core developers in October 2021. It transitioned to a proof-of-stake consensus mechanism after Ropsten testnet reached a Terminal Total Difficulty (TTD) of 50000000000000000.
 
 Testnets are designed to mimic Ethereum's mainnet environment, and Sepolia was created to simulate harsh network conditions with shorter block times for faster transaction confirmation times. 
