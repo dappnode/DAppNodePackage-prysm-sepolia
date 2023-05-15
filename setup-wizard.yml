@@ -1,20 +1,13 @@
 version: "2"
 fields:
-  - id: HTTP_WEB3PROVIDER
+  - id: checkpointSyncUrl
     target:
       type: environment
-      name: HTTP_WEB3PROVIDER
+      name: CHECKPOINT_SYNC_URL
       service: beacon-chain
-    title: Eth1.x node URL
+    title: Checkpoint for fast sync
     description: >-
-      URL to the Eth1.x node need for the Beacon chain.
-  - id: web3Backup
-    target:
-      type: environment
-      name: WEB3_BACKUP
-      service: beacon-chain
-    title: Add a backup web3 provider
-    description: >-
-      It's a good idea to add a backup web3 provider in case your main one goes down. For example, if your primary EL client is a local Geth, but you want to use Infura as a backup.
-      Get your web3 backup from another machine here is where you have to write the IP address and port or url.
-    required: false
+      To get Prysm up and running in only a few minutes, you can start Prysm from a recent finalized checkpoint state rather than syncing from genesis. This is substantially **faster** and consumes **less resources** than syncing from genesis, while still providing all the same features. Be sure you are using a trusted node for the fast sync. Check the [Prysm docs](https://docs.prylabs.network/docs/prysm-usage/checkpoint-sync) for more information.
+      You can use the EF DevOps endpoint `https://checkpoint-sync.sepolia.ethpandaops.io`, the BeaconState.info endpoint `https://sepolia.beaconstate.info` or the Lodestar (ChainSafe) endpoint `https://beaconstate-sepolia.chainsafe.io`.
+      *Note - If you are going to provide your own checkpoint sync endpoint, make sure you do not use a slash `/` at the end of the URL.*
+    required: true

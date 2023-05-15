@@ -1,22 +1,37 @@
 {
   "name": "prysm-sepolia.dnp.dappnode.eth",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "upstreamVersion": "v4.0.3",
   "upstreamRepo": "prysmaticlabs/prysm",
   "upstreamArg": "UPSTREAM_VERSION",
   "shortDescription": "Prysm Sepolia beacon chain node",
   "description": "Sepolia is an Ethereum testnet which has a closed set of validators, this package lets the user run a beacon-chain node by using the Prysm client. Sepolia network is recommended to test node configuration and node interaction.",
   "type": "service",
+  "architectures": ["linux/amd64"],
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
   "contributors": [
     "tropicar <tropicar@dappnode.io> (https://github.com/tropicar)"
   ],
-  "categories": ["Developer tools"],
-  "license": "GPL-3.0",
   "chain": {
     "driver": "ethereum-beacon-chain",
     "serviceName": "beacon-chain",
     "portNumber": 3500
+  },
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dappnode/DAppNodePackage-prysm-sepolia.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dappnode/DAppNodePackage-prysm-sepolia/issues"
+  },
+  "requirements": {
+    "minimumDappnodeVersion": "0.2.60"
+  },
+  "categories": ["Blockchain", "ETH2.0"],
+  "style": {
+    "featuredBackground": "linear-gradient(67deg, #16000c, #123939)",
+    "featuredColor": "white"
   },
   "links": {
     "homepage": "https://prysmaticlabs.com/",
