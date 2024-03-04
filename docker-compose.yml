@@ -1,4 +1,4 @@
-version: "3.4"
+version: "3.5"
 services:
   beacon-chain:
     image: "beacon-chain.prysm-sepolia.dnp.dappnode.eth:1.0.1"
@@ -17,7 +17,7 @@ services:
       P2P_UDP_PORT: 18114
       CHECKPOINT_SYNC_URL: "https://checkpoint-sync.sepolia.ethpandaops.io"
       CORSDOMAIN: "http://prysm-sepolia.dappnode"
-      HTTP_ENGINE: "http://geth.sepolia-geth.dappnode:8551"
+      HTTP_ENGINE: "http://sepolia-geth.dappnode:8551"
       EXTRA_OPTS: ""
 volumes:
   beacon-chain-data: {}
