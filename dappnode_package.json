@@ -10,7 +10,8 @@
   "architectures": ["linux/amd64"],
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
   "contributors": [
-    "tropicar <tropicar@dappnode.io> (https://github.com/tropicar)"
+    "tropicar <tropicar@dappnode.io> (https://github.com/tropicar)",
+    "Voss <voss@visnovalabs.io> (https://github.com/alexpeterson91)"
   ],
   "chain": {
     "driver": "ethereum-beacon-chain",
