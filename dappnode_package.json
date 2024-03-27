@@ -1,7 +1,7 @@
 {
   "name": "prysm-sepolia.dnp.dappnode.eth",
   "version": "0.1.2",
-  "upstreamVersion": "v5.0.0",
+  "upstreamVersion": "v5.0.2",
   "upstreamRepo": "prysmaticlabs/prysm",
   "upstreamArg": "UPSTREAM_VERSION",
   "shortDescription": "Prysm Sepolia beacon chain node",
