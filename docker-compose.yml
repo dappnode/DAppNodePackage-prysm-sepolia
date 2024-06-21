@@ -1,23 +1,23 @@
 version: "3.5"
 services:
   beacon-chain:
-    image: "beacon-chain.prysm-sepolia.dnp.dappnode.eth:1.0.1"
+    image: beacon-chain.prysm-sepolia.dnp.dappnode.eth:1.0.1
     build:
       context: beacon-chain
       args:
-        UPSTREAM_VERSION: v5.0.0
+        UPSTREAM_VERSION: v5.0.4
     volumes:
-      - "beacon-chain-data:/data"
+      - beacon-chain-data:/data
     ports:
-      - "19114:19114/tcp"
-      - "18114:18114/udp"
+      - 19114:19114/tcp
+      - 18114:18114/udp
     restart: unless-stopped
     environment:
       P2P_TCP_PORT: 19114
       P2P_UDP_PORT: 18114
-      CHECKPOINT_SYNC_URL: "https://checkpoint-sync.sepolia.ethpandaops.io"
-      CORSDOMAIN: "http://prysm-sepolia.dappnode"
-      HTTP_ENGINE: "http://sepolia-geth.dappnode:8551"
+      CHECKPOINT_SYNC_URL: https://checkpoint-sync.sepolia.ethpandaops.io
+      CORSDOMAIN: http://prysm-sepolia.dappnode
+      HTTP_ENGINE: http://sepolia-geth.dappnode:8551
       EXTRA_OPTS: ""
 volumes:
   beacon-chain-data: {}
